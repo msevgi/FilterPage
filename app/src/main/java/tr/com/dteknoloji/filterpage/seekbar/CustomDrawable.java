@@ -137,9 +137,7 @@ public class CustomDrawable extends Drawable {
         }
 
         float yres;
-        // Если многострочный текст
         if (mIsMultiline) {
-            // Если четная точка, то сверху
             if ((dot.id % 2) == 0) {
                 yres = y - mTextMargin - mDotRadius;
             } else {

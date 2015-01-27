@@ -61,8 +61,7 @@ public class ComboSeekBar extends SeekBar {
                                              mTextSize,
                                              mIsMultiline));
 
-      // по умолчанию не равно 0 и это проблема
-      setPadding(0, 0, 0, 0);
+      setPadding(10, 10, 10, 15);
    }
 
    @Override

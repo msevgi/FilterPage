@@ -1,9 +1,14 @@
 
 package tr.com.dteknoloji.filterpage;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import tr.com.dteknoloji.filterpage.seekbar.ComboSeekBar;
+
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -14,11 +19,6 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import tr.com.dteknoloji.filterpage.seekbar.ComboSeekBar;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener,
          SeekBar.OnSeekBarChangeListener {
@@ -40,7 +40,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
    private SpinnerAdapter    adapterPlace;
    private SpinnerAdapter    adapterClothes;
    private Button            buttonApply;
-   private SeekBar           seekBarDistance;
+   // private SeekBar seekBarDistance;
    private ComboSeekBar      comboSeekBarDistance;
    private ArrayList<String> listKitchen = new ArrayList<>();
    private ArrayList<String> listConsept = new ArrayList<>();
@@ -58,19 +58,23 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
       getPlaceList();
       getClothesList();
       initItem();
-      comboSeekBarDistance.setThumb(getResources().getDrawable(R.drawable.ic_launcher));
+      // comboSeekBarDistance.setThumb(getResources().getDrawable(R.drawable.ic_launcher));
       // comboSeekBarDistance.
-      ComboSeekBar.Dot dot = new ComboSeekBar.Dot();
-      dot.id = 1;
-      dot.mX = 10;
-      dot.text = "10";
+//      ComboSeekBar.Dot dot = new ComboSeekBar.Dot();
+//      dot.id = 1;
+//      dot.mX = 10;
+//      dot.text = "10";
       ArrayList<String> dots = new ArrayList<>();
+      dots.add("0");
       dots.add("5");
       dots.add("10");
       dots.add("15");
+      dots.add("20");
+
       comboSeekBarDistance.setAdapter(dots);
       // comboSeekBarDistance.setSplitTrack(true);
       // comboSeekBarDistance.
+      // comboSeekBarDistance.setProgressDrawable(getResources().getDrawable(R.drawable.seekbar_background));
       adapterKitchen = new SpinnerAdapter(this, 0, listKitchen);
       spinnerKitchen.setAdapter(adapterKitchen);
       adapterKitchen.setNotifyOnChange(true);
@@ -107,7 +111,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
          default :
             break;
       }
-      seekBarDistance.setProgress(filterModel.getDistance());
+      comboSeekBarDistance.setProgress(filterModel.getDistance());
       switch (filterModel.getPrice()) {
          case FilterModel.ALL :
             selectPrice(textViewAll);
@@ -176,10 +180,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
       spinnerClothes = (Spinner) findViewById(R.id.spinner_clothes);
       spinnerPlace = (Spinner) findViewById(R.id.spinner_place);
       buttonApply = (Button) findViewById(R.id.button_apply);
-      seekBarDistance = (SeekBar) findViewById(R.id.seekbar_distance);
+      // seekBarDistance = (SeekBar) findViewById(R.id.seekbar_distance);
       comboSeekBarDistance = (ComboSeekBar) findViewById(R.id.combo_seekbar_distance);
       comboSeekBarDistance.setOnSeekBarChangeListener(this);
-      seekBarDistance.setOnSeekBarChangeListener(this);
+      comboSeekBarDistance.setOnSeekBarChangeListener(this);
       spinnerKitchen.setOnItemSelectedListener(this);
       spinnerPlace.setOnItemSelectedListener(this);
       spinnerClothes.setOnItemSelectedListener(this);
