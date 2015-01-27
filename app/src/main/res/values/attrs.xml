@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="color1" format="color" />
+    <declare-styleable name="ComboSeekBar">
+        <attr name="multiline" format="boolean" />
+        <attr name="color1" />
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
+</resources>

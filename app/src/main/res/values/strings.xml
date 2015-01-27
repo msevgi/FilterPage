@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FilterPage</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="distance">Mesafe</string>
+    <string name="sorting">Sıralama</string>
+    <string name="price">Fiyat</string>
+    <string name="all">Hepsi</string>
+    <string name="apply">Uygula</string>
+    <string-array name="kitchen">
+        <item>Mutfak Türü</item>
+        <item>Türk Mutfağı</item>
+        <item>Yunan Mutfağı</item>
+        <item>İtalyan Mutfağı</item>
+    </string-array>
+    <string-array name="consept">
+        <item>Konsept</item>
+        <item>Konsept1</item>
+        <item>Konsept2</item>
+        <item>Konsept3</item>
+    </string-array>
+    <string-array name="place">
+        <item>Alan Seçimi</item>
+
+        <item>Açık Alan</item>
+        <item>Kapalı Alan</item>
+    </string-array>
+    <string-array name="clothes">
+        <item>Kıyafet</item>
+        <item>Klasik</item>
+        <item>Spor</item>
+    </string-array>
+</resources>
