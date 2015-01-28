@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-        <style parent="@android:style/Widget.Spinner" name="SpinnerAsEditText"><item name="android:background">#F3F2FA</item>
+        <style parent="@android:style/Widget.Spinner" name="SpinnerAsEditText"><item name="android:background">#FFFFFF</item>
         </style>
 
 </resources>

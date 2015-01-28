@@ -58,23 +58,13 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
       getPlaceList();
       getClothesList();
       initItem();
-      // comboSeekBarDistance.setThumb(getResources().getDrawable(R.drawable.ic_launcher));
-      // comboSeekBarDistance.
-//      ComboSeekBar.Dot dot = new ComboSeekBar.Dot();
-//      dot.id = 1;
-//      dot.mX = 10;
-//      dot.text = "10";
       ArrayList<String> dots = new ArrayList<>();
       dots.add("0");
       dots.add("5");
       dots.add("10");
       dots.add("15");
       dots.add("20");
-
       comboSeekBarDistance.setAdapter(dots);
-      // comboSeekBarDistance.setSplitTrack(true);
-      // comboSeekBarDistance.
-      // comboSeekBarDistance.setProgressDrawable(getResources().getDrawable(R.drawable.seekbar_background));
       adapterKitchen = new SpinnerAdapter(this, 0, listKitchen);
       spinnerKitchen.setAdapter(adapterKitchen);
       adapterKitchen.setNotifyOnChange(true);
@@ -88,6 +78,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
       spinnerPlace.setAdapter(adapterPlace);
       adapterPlace.setNotifyOnChange(true);
       Bundle bundle = getIntent().getExtras();
+       //spinnerlari dolduracak listeyi bundle alabiliriz.
       if (bundle == null) {
          filterModel = new FilterModel();
       }

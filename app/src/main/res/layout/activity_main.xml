@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3F2FA">
+    android:background="#FFFFFF">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,8 +13,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-
-            android:paddingBottom="10dp">
+            android:background="#DCE0DD"
+            android:paddingBottom="15dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -42,10 +42,6 @@
                     android:background="@drawable/textview_selector_left"
                     android:clickable="true" />
 
-                <View
-                    android:layout_width="0.5dp"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textview_alphabet"
@@ -57,10 +53,6 @@
                     android:background="@drawable/textview_selector_center"
                     android:clickable="true" />
 
-                <View
-                    android:layout_width="0.5dp"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textview_popular"
@@ -115,7 +107,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp">
 
             <ImageView
                 android:layout_width="20dp"
@@ -141,7 +136,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="10dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp">
 
             <TextView
                 android:id="@+id/textview_all"
@@ -155,47 +153,35 @@
                 android:clickable="true"
                 android:background="@drawable/textview_selector_left" />
 
-            <View
-                android:layout_width="0.5dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/black" />
 
             <TextView
                 android:id="@+id/textview_cheap"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="tl"
+                android:text="₺"
                 android:gravity="center"
                 android:clickable="true"
                 android:background="@drawable/textview_selector_center" />
 
-            <View
-                android:layout_width="0.5dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/black" />
 
             <TextView
                 android:id="@+id/textview_suitable"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="tl tl"
+                android:text="₺₺"
                 android:gravity="center"
                 android:clickable="true"
                 android:background="@drawable/textview_selector_center" />
 
-            <View
-                android:layout_width="0.5dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/black" />
 
             <TextView
                 android:id="@+id/textview_expensive"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="tl tl tl"
+                android:text="₺₺₺"
                 android:gravity="center"
                 android:clickable="true"
                 android:background="@drawable/textview_selector_right" />
@@ -232,6 +218,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:background="@drawable/ic_keyboard_arrow_right_grey_24dp" />
         </LinearLayout>
 
@@ -249,6 +236,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:background="@drawable/ic_brightness_2_grey_24dp" />
 
             <Spinner
@@ -265,6 +253,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:background="@drawable/ic_keyboard_arrow_right_grey_24dp" />
         </LinearLayout>
 
@@ -299,6 +288,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:background="@drawable/ic_keyboard_arrow_right_grey_24dp" />
         </LinearLayout>
 
@@ -316,6 +306,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:background="@drawable/ic_perm_identity_grey_24dp" />
 
             <Spinner
@@ -332,6 +323,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:background="@drawable/ic_keyboard_arrow_right_grey_24dp" />
         </LinearLayout>
 
@@ -341,6 +333,8 @@
             android:layout_height="wrap_content"
             android:text="@string/apply"
             android:layout_marginTop="25dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
             android:background="@android:color/holo_green_light" />
     </LinearLayout>
 </ScrollView>
